@@ -30,12 +30,12 @@ public class Pix extends Pagamento {
     @Override
     public String obterDescricao() {
         return """
-               PAGAMENENTO EM PIX REALIZADO COM SUCESSO!
-               ID: %s
-               VALOR: %s
-               CHAVE PIX: %s
-               DESCONTO: %s
-               VALOR FINAL: %s 
+               \nPAGAMENENTO EM PIX REALIZADO COM SUCESSO!
+                    ID: %s
+                    VALOR: %s
+                    CHAVE PIX: %s
+                    DESCONTO: %s
+                    VALOR FINAL: %s 
                """.formatted(
                 getId(),
                 getValor(),

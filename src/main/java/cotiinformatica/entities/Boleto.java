@@ -38,12 +38,12 @@ public class Boleto extends Pagamento{
     @Override
     public String obterDescricao() {
         return """
-               PAGAMENENTO EM BOLETO REALIZADO COM SUCESSO!
-               ID: %s
-               VALOR: %s
-               MULTA: %s
-               VENCIMENTO: %s
-               VALOR FINAL: %s 
+               \nPAGAMENENTO EM BOLETO REALIZADO COM SUCESSO!
+                    ID: %s
+                    VALOR: %s
+                    MULTA: %s
+                    VENCIMENTO: %s
+                    VALOR FINAL: %s 
                """.formatted(
                        getId(),
                        getValor(),
