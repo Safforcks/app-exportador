@@ -20,4 +20,9 @@ public class CartaoCredito extends Pagamento {
     public void setTaxaProcessamento(Double taxaProcessamento) {
         this.taxaProcessamento = taxaProcessamento;
     }
+
+    @Override
+    public Double calcularValorFinal() {
+        return null;
+    }
 }

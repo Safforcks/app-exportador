@@ -22,4 +22,9 @@ public class Boleto extends Pagamento{
     public void setMulta(Double multa) {
         this.multa = multa;
     }
+
+    @Override
+    public Double calcularValorFinal() {
+        return null;
+    }
 }

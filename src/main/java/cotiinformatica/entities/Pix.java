@@ -20,4 +20,9 @@ public class Pix extends Pagamento {
     public void setDesconto(Double desconto) {
         this.desconto = desconto;
     }
+
+    @Override
+    public Double calcularValorFinal() {
+        return null;
+    }
 }
