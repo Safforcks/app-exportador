@@ -2,7 +2,7 @@ package cotiinformatica.entities;
 
 import java.util.UUID;
 
-public class Pagamento {
+public abstract class Pagamento {
 
     private UUID id;
     private Double valor;
@@ -24,5 +24,5 @@ public class Pagamento {
     }
 
     public abstract Double calcularValorFinal();
-    public abstract  String obterDescricao();
+    public abstract String obterDescricao();
 }
