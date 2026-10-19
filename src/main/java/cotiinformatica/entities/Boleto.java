@@ -25,6 +25,31 @@ public class Boleto extends Pagamento{
 
     @Override
     public Double calcularValorFinal() {
-        return null;
+
+        //Verificar se o boleto está vencido
+        if (LocalDate.now().isAfter(vencimento)) {
+            //Aplicar a multa
+            return getValor() * multa;
+        }
+
+        return  getValor();
+    }
+
+    @Override
+    public String obterDescricao() {
+        return """
+               PAGAMENENTO EM BOLETO REALIZADO COM SUCESSO!
+               ID: %s
+               VALOR: %s
+               MULTA: %s
+               VENCIMENTO: %s
+               VALOR FINAL: %s 
+               """.formatted(
+                       getId(),
+                       getValor(),
+                       multa,
+                       vencimento,
+                       calcularValorFinal()
+                    );
     }
 }

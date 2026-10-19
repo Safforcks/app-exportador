@@ -23,6 +23,25 @@ public class Pix extends Pagamento {
 
     @Override
     public Double calcularValorFinal() {
-        return null;
+
+        return getValor() - (getValor() * desconto);
+    }
+
+    @Override
+    public String obterDescricao() {
+        return """
+               PAGAMENENTO EM PIX REALIZADO COM SUCESSO!
+               ID: %s
+               VALOR: %s
+               CHAVE PIX: %s
+               DESCONTO: %s
+               VALOR FINAL: %s 
+               """.formatted(
+                getId(),
+                getValor(),
+                chavePix,
+                desconto,
+                calcularValorFinal()
+        );
     }
 }

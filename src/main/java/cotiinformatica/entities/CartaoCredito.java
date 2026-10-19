@@ -23,6 +23,25 @@ public class CartaoCredito extends Pagamento {
 
     @Override
     public Double calcularValorFinal() {
-        return null;
+
+        return getValor() * taxaProcessamento;
+    }
+
+    @Override
+    public String obterDescricao() {
+        return """
+               PAGAMENENTO EM CARTÂO DE CRÉDITO REALIZADO COM SUCESSO!
+               ID: %s
+               VALOR: %s
+               PARCELAS: %s
+               TAXA DE PROCESSAMENTO: %s
+               VALOR FINAL: %s 
+               """.formatted(
+                getId(),
+                getValor(),
+                parcelas,
+                taxaProcessamento,
+                calcularValorFinal()
+        );
     }
 }

@@ -24,4 +24,5 @@ public class Pagamento {
     }
 
     public abstract Double calcularValorFinal();
+    public abstract  String obterDescricao();
 }
